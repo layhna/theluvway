@@ -108,41 +108,30 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 
 
 
-.hex-main {
+.grid-main {
   display:flex;
-  --s: 50px;  /* size  */
-  --m: 4px;    /* margin */
-  --f: calc(var(--s) + 4*var(--m));
+  flex-wrap: wrap;
+  width: 100%;
+  border: 2px dotted rgb(96 139 168);
+  background-color: rgb(96 139 168);
 }
 
-.hex-container {
-  font-size: 0; /*disable white space between inline block element */
-}
-
-.hex-container div {
-  width: var(--s);
-  margin: var(--m);
-  height: var(--s); 
-  display: inline-block;
-  font-size:initial;
- /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);*/
+/* Grid Spaces */
+.grid-main > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(256 256 256);
+/*  border-radius: 1px;*/
+  flex: 1 1 15%;
+  aspect-ratio: 1/1;
+  margin: 2px;
   background: red;
- /* margin-bottom: calc(var(--m) - var(--s)*0.5); */
-  border: 5px;
 }
-.hex-container div:nth-child(odd) {
+.grid-main div:nth-child(odd) {
   background:green;
 }
-/*
-.hex-container::before {
-  content: "";
-  width: calc(var(--s)/2 + var(--m));
-  float: left;
-  height: 120%;
-  shape-outside: repeating-linear-gradient(     
-                   #0000 0 calc(var(--f) - 3px),      
-                   #000  0 var(--f));
-}*/
+
 
 
 
@@ -1785,14 +1774,14 @@ This passage autosaves, and the next time the game opens the player will be able
 
 &lt;!-- IMPORTAN! INCLUDE THE CODE BELOW ON ALL STAT PAGES TO MAKE SURE THE LINK RETURNS THE USER TO THE LAST PASSAGE. IF YOU USE A NORMAL RETURN LINK IT WILL SIMPLY LOOP --&gt;
 
-&lt;span style=&quot;display: block; text-align: center;&quot;&gt;&lt;&lt;link &quot;« Return to game&quot; $return&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="14" name="Environment" tags="" position="675,125" size="100,100">Health, Energy, Mount, Other? ~ &lt;&lt;link &quot;Mini-map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;span style=&quot;display: block; text-align: center;&quot;&gt;&lt;&lt;link &quot;« Return to game&quot; $return&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="14" name="Environment" tags="nobr" position="675,125" size="100,100">Health, Energy, Mount, Other? ~ &lt;&lt;link &quot;Mini-map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 
-&lt;div class=&quot;hex-main&quot;&gt;
-  &lt;div class=&quot;hex-container&quot;&gt;
-    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
-  &lt;/div&gt;
+&lt;div class=&quot;grid-main&quot;&gt;
+&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;
+&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;
 &lt;/div&gt;
+
 
 
 
