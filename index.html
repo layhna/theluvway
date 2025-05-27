@@ -112,7 +112,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
   display:flex;
   --s: 50px;  /* size  */
   --m: 4px;    /* margin */
-  --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+  --f: calc(var(--s) + 4*var(--m));
 }
 
 .hex-container {
@@ -122,12 +122,12 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 .hex-container div {
   width: var(--s);
   margin: var(--m);
-  height: calc(var(--s)*1.1547); 
+  height: var(--s); 
   display: inline-block;
   font-size:initial;
-  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   background: red;
-  margin-bottom: calc(var(--m) - var(--s)*0.2885); 
+  margin-bottom: calc(var(--m) - var(--s)*0.5); 
 }
 .hex-container div:nth-child(odd) {
   background:green;
