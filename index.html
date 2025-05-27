@@ -125,13 +125,15 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
   height: var(--s); 
   display: inline-block;
   font-size:initial;
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+ /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);*/
   background: red;
-  margin-bottom: calc(var(--m) - var(--s)*0.5); 
+ /* margin-bottom: calc(var(--m) - var(--s)*0.5); */
+  border: 5px;
 }
 .hex-container div:nth-child(odd) {
   background:green;
 }
+/*
 .hex-container::before {
   content: "";
   width: calc(var(--s)/2 + var(--m));
@@ -140,7 +142,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
   shape-outside: repeating-linear-gradient(     
                    #0000 0 calc(var(--f) - 3px),      
                    #000  0 var(--f));
-}
+}*/
 
 
 
